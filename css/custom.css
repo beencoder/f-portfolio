@@ -9,34 +9,225 @@
   z-index: 10000;
   text-align: center;
   line-height: 45px;
-  font-family: 'Abel', sans-serif;
 }
 
-#section1 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-#section1 .tit-inner:nth-last-of-type(2) {
+/* header */
+#header {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  z-index: 100;
 }
-#section1 .tit-inner:nth-last-of-type(1) {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+#header .title {
+  position: relative;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+  z-index: 102;
 }
-.main-tit {
+#header .menu-btn {
   position: absolute;
-  font-size: 100px;
+  top: 20px;
+  right: 20px;
+  height: 25px;
+  width: 30px;
+  z-index: 101;
 }
-#section1 .tit-inner:nth-last-of-type(1) .main-tit {
-  bottom: 0;
+#header .menu-btn .menu-icon {
+  height: 4px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 2px;
+  background-color: #000;
+  transform: translate(-50%,-50%) rotate(0deg);
+  transition: all 0.3s ease-out;
+}
+#header .menu-btn .menu-icon::before, #header .menu-btn .menu-icon::after {
+  content:"";
+  position: absolute;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  width: 50%;
+  transition: all 0.3s ease-out;
+}
+#header .menu-btn .menu-icon::before {
+  top: -9px;
+  left: 0;
+  transform-origin: left;
+}
+#header .menu-btn .menu-icon::after {
+  bottom: -9px;
   right: 0;
+  transform-origin: right;
+}
+#header .menu-btn.active .menu-icon {
+  transform: translate(-50%,-50%) rotate(135deg);
+}
+#header .menu-btn.active .menu-icon::before {
+  top: 0;
+  transform: translateX(100%) rotate(-90deg);
+}
+#header .menu-btn.active .menu-icon::after {
+  bottom: 0;
+  transform: translateX(-100%) rotate(-90deg);
+}
+#header .menu-btn.active + nav {
+  width: 100vw;
+  height: 100vh;
+  border-bottom-left-radius: 0%;
+}
+#header .menu-btn.active + nav .menu li {
+  display: block;
+}
+#header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 80px;
+  background-color: #fff;
+  border-bottom-left-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  transition: all 0.3s ease-out;
+  z-index: 100;
+}
+#header nav .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  transform: translateY(50%);
+}
+#header nav .menu li {
+  display: none;
+  font-size: 2rem;
+  transition: all 0.3s ease-out;
+}
+#header nav .menu li a {
+  transition: all 0.3s;
+}
+#header nav .menu li a:hover {
+  color: #333;
+  background-color: #eee;
 }
 
+/* Main */
+#section1 {
+  position: relative;
+  width: 100%;
+  height: 2000px;
+}
+#section1 .tit-inner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: fixed;
+  top: 0;
+}
+#section1 .tit-inner .inner {
+  width: 100%;
+  height: 100%;
+}
+#section1 .tit-inner .inner .main-tit {
+  font-size: 15rem;
+  text-transform: uppercase;
+  font-family: 'Philosopher', sans-serif;
+}
+
+/* About */
 #section2 {
   position: relative;
+  height: 100vh;
   background-color: #fff;
+  /* overflow: hidden; */
+}
+#section2::before {
+  content: "";
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+}
+#section2 .main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+#section2 .main .contents {
+  display: flex;
+  height: 100%;
+}
+#section2 .main .contents > div {
+  /* position: relative; */
+  width: 120vw;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+  border: 1px solid #000;
+}
+#section2 .main .contents div:not(.cont1) {
+  justify-content: center;
+}
+#section2 .main .contents .cont1 .about-tit {
+  font-size: 20rem;
+  line-height: 0.8;
+  text-align: right;
+  font-family: 'Philosopher', sans-serif;
+  margin-left: 200px;
+}
+#section2 .main .contents .cont1 .my-photo {
+  width: auto;
+  height: 100%;
+  transform: translateX(-40%);
+  filter: grayscale(100%);
+  z-index: -1;
+}
+#section2 .main .contents div:not(.cont1) .my-photo {
+  width: 10%;
+}
+#section2 .main .contents > div .highlight {
+  color: limegreen;
+}
+#section2 .main .contents .cont2 .about-txt, #section2 .main .contents .cont3 .about-txt {
+  position: relative;
+  font-family: 'GangwonEdu_OTFBoldA';
+  font-size: 7.5rem;
+  line-height: 1.3;
+}
+#section2 .main .contents div .about-txt .info-txt {
+  position: absolute;
+  bottom: 6%;
+  right: -4%;
+  width: 55%;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: #202020;
+}
+#section2 .main .contents .cont3 .about-txt .info-txt {
+  bottom: 7.5%;
+  width: 70%;
+}
+
+
+/* P-project */
+#section3 {
+  position: relative;
+  background-color: #d4d4d4;
+  height: 100vh;
+  margin-top: 5500px;
+}
+
+/* F-project */
+#section4 {
+  position: relative;
+  background-color: ivory;
 }

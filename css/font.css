@@ -1,18 +1,25 @@
 @charset "UTF-8";
 
-/* Krona One 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/* Philosopher */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
 
-/* Abel 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* 강원교육모두체 */
+@font-face {
+    font-family: 'GangwonEdu';
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gangwon/GangwonEduAllLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-/* Poppins 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
+/* 기존에 있던 것들 */
 /* 조선일보명조 폰트 */
 @font-face {
-
     font-family: 'Chosunilbo_myungjo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
     font-weight: normal;
