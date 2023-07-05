@@ -4,11 +4,12 @@
   top: 10px;
   width: 45px;
   height: 45px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   z-index: 10000;
   text-align: center;
-  line-height: 45px;
+  font-size: 1.5rem;
+  line-height: 50px;
 }
 
 /* header */
@@ -24,6 +25,7 @@
   width: 50%;
   margin-top: 20px;
   margin-left: 20px;
+  opacity: 0;
   z-index: 102;
 }
 #header .menu-btn {
@@ -43,7 +45,7 @@
   border-radius: 2px;
   background-color: #000;
   transform: translate(-50%,-50%) rotate(0deg);
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 #header .menu-btn .menu-icon::before, #header .menu-btn .menu-icon::after {
   content:"";
@@ -52,7 +54,7 @@
   border-radius: inherit;
   background-color: inherit;
   width: 50%;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 #header .menu-btn .menu-icon::before {
   top: -9px;
@@ -92,7 +94,7 @@
   background-color: #fff;
   border-bottom-left-radius: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
   z-index: 100;
 }
 #header nav .menu {
@@ -106,10 +108,10 @@
 #header nav .menu li {
   display: none;
   font-size: 2rem;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 #header nav .menu li a {
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 #header nav .menu li a:hover {
   color: #333;
@@ -126,26 +128,22 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 160fr 103fr;
   position: fixed;
   top: 0;
+  left: 0;
+  padding: 60px;
 }
 #section1 .tit-inner .inner {
   width: 100%;
   height: 100%;
-}
-#section1 .tit-inner .inner .main-tit {
-  font-size: 15rem;
-  text-transform: uppercase;
-  font-family: 'Philosopher', sans-serif;
 }
 
 /* About */
 #section2 {
   position: relative;
   height: 100vh;
-  background-color: #fff;
-  /* overflow: hidden; */
+  background-color: #F0F2F2;
 }
 #section2::before {
   content: "";
@@ -154,7 +152,7 @@
   left: 0;
   width: 100%;
   height: 300px;
-  background-color: #fff;
+  background-color: #F0F2F2;
 }
 #section2 .main {
   position: absolute;
@@ -165,41 +163,77 @@
 #section2 .main .contents {
   display: flex;
   height: 100%;
+  /* background-color: #000; */
 }
 #section2 .main .contents > div {
-  /* position: relative; */
+  position: relative;
   width: 120vw;
   display: flex;
   align-items: center;
-  padding: 0 100px;
-  border: 1px solid #000;
-}
-#section2 .main .contents div:not(.cont1) {
-  justify-content: center;
+  border: 1px solid #d4d4d4;
+  background-color: #F0F2F2;
 }
 #section2 .main .contents .cont1 .about-tit {
   font-size: 20rem;
   line-height: 0.8;
   text-align: right;
   font-family: 'Philosopher', sans-serif;
-  margin-left: 200px;
+  margin-left: 400px;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
 }
 #section2 .main .contents .cont1 .my-photo {
   width: auto;
   height: 100%;
-  transform: translateX(-40%);
   filter: grayscale(100%);
   z-index: -1;
 }
-#section2 .main .contents div:not(.cont1) .my-photo {
-  width: 10%;
+#section2 .main .contents .cont1 .highlight {
+  color: #BDD9F2;
 }
 #section2 .main .contents > div .highlight {
-  color: limegreen;
+  color: #88AABF;
 }
-#section2 .main .contents .cont2 .about-txt, #section2 .main .contents .cont3 .about-txt {
+
+#section2 .main .contents .cont2, #section2 .main .contents .cont3 {
+  justify-content: center;
+}
+#section2 .main .contents .cont2 .f-print {
+  position: absolute;
+  left: 0;
+  bottom: 150px;
+  background: url("../images/footprint.png") no-repeat center center/contain;
+  width: 30px;
+  height: 75px;
+  transform: rotate(75deg);
+}
+#section2 .main .contents .cont2 .f-print:nth-of-type(2) {
+  left: 110px;
+  bottom: 120px;
+  transform: rotate(75deg) scaleX(-1);
+}
+#section2 .main .contents .cont2 .f-print:nth-of-type(3) {
+  left: 180px;
+  bottom: 210px;
+  transform: rotate(60deg);
+}
+#section2 .main .contents .cont2 .f-print:nth-of-type(4) {
+  left: 290px;
+  bottom: 200px;
+  transform: rotate(70deg) scaleX(-1);
+}
+#section2 .main .contents .cont2 .f-print:nth-of-type(5) {
+  left: 360px;
+  bottom: 290px;
+  transform: rotate(70deg);
+}
+#section2 .main .contents .cont2 .f-print:nth-of-type(6) {
+  left: 470px;
+  bottom: 260px;
+  transform: rotate(80deg) scaleX(-1);
+}
+#section2 .main .contents div .about-txt {
   position: relative;
-  font-family: 'GangwonEdu_OTFBoldA';
   font-size: 7.5rem;
   line-height: 1.3;
 }
@@ -211,19 +245,92 @@
   font-size: 1.8rem;
   line-height: 1.3;
   color: #202020;
+  opacity: 0;
 }
-#section2 .main .contents .cont3 .about-txt .info-txt {
-  bottom: 7.5%;
-  width: 70%;
+#section2 .main .contents .cont2 .img-inner {
+  position: relative;
+}
+#section2 .main .contents .cont2 .img-inner .my-photo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 300px;
+  transform: translate(30%, -50%);
+}
+#section2 .main .contents .cont2 .img-inner .my-photo:nth-of-type(2) {
+  transform: translate(40%, -55%);
+  z-index: 1;
+}
+#section2 .main .contents .cont2 .img-inner .my-photo:nth-of-type(3) {
+  transform: translate(50%, -60%);
+  z-index: 2;
 }
 
+#section2 .main .contents .cont3 .about-txt .info-txt {
+  bottom: 7.5%;
+  right: -2%;
+  width: 70%;
+}
+#section2 .main .contents .cont3 .img-inner {
+  position: relative;
+}
+#section2 .main .contents .cont3  .img-inner::before {
+  content: "";
+  position: absolute;
+  right:20%;
+  top: 8%;
+  background: url("../images/about-home1.png") no-repeat center center/cover;
+  width: 100px;
+  height: 110px;
+  opacity: 0.7;
+  animation: img-change 3.5s infinite;
+}
+@keyframes img-change {
+  0% {
+    background-image: url("../images/about-home1.png");
+  }
+  25% {
+    background-image: url("../images/about-home2.png");
+  }
+  50% {
+    background-image: url("../images/about-home3.png");
+  }
+  75% {
+    background-image: url("../images/about-home4.png");
+  }
+}
+#section2 .main .contents .cont3 .img-inner .about-img {
+  width: 400px;
+  margin-left: 50px;
+}
 
 /* P-project */
 #section3 {
   position: relative;
-  background-color: #d4d4d4;
+  background-color: #000;
   height: 100vh;
-  margin-top: 5500px;
+  margin-top: 5000px;
+}
+#section3 .tit-inner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+#section3 .tit-inner .tit {
+  font-size: 7rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  white-space: nowrap;
+  background-image: linear-gradient(60deg, #ff5858, #f09819);
+  animation: text-gd 1s infinite ease alternate;
+}
+@keyframes text-gd {
+  0% {
+    background-image: linear-gradient(60deg, #ff5858);
+  }
+  100% {
+    background-image: linear-gradient(360deg, #ff5858, #f09819);
+  }
 }
 
 /* F-project */
