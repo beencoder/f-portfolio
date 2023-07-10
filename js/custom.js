@@ -9,8 +9,8 @@ $(function () {
   // Skrollr
   let s = skrollr.init({
     forceHeight: false,
-    smoothScrolling: false,
-    // smoothScrollingDuration: 200
+    smoothScrolling: true,
+    smoothScrollingDuration: 200
   });
 
   // Menu
@@ -29,6 +29,6 @@ $(function () {
     document.querySelector(".main .contents").appendChild(star);
   }
 
-  setInterval(addStar, 40);
+  // setInterval(addStar, 40);
   
 });

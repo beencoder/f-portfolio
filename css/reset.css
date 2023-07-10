@@ -4,21 +4,34 @@
 .HYPERNET---MICROSITE-1-hex {
   color: #AEB9F2;
 }
-
 .HYPERNET---MICROSITE-2-hex {
   color: #A7BDD9;
 }
-
 .HYPERNET---MICROSITE-3-hex {
   color: #BDD9F2;
 }
-
 .HYPERNET---MICROSITE-4-hex {
   color: #88AABF;
 }
-
 .HYPERNET---MICROSITE-5-hex {
   color: #F0F2F2;
+}
+
+/* Color Theme Swatches in Hex */
+.Glassmorphism-icons-1-hex {
+  color: #0528F2;
+}
+.Glassmorphism-icons-2-hex {
+  color: #0540F2;
+}
+.Glassmorphism-icons-3-hex {
+  color: #416EF2;
+}
+.Glassmorphism-icons-4-hex {
+  color: #AEC5F2;
+}
+.Glassmorphism-icons-5-hex {
+  color: #F2F2F2;
 }
 
 /* border-box 초기화 */
@@ -50,7 +63,7 @@ html {
   font-size: 0.625em;
 }
 body, button, input, select, table, textarea {
-  font-family: 'GangwonEdu_OTFBoldA';
+  font-family: 'SUITE';
   line-height: 1;
   color: #0D0D0D;
   -webkit-font-smoothing: antialiased;
