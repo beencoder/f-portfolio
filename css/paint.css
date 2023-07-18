@@ -1,0 +1,190 @@
+#section2 .about .contents>div .paint {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: url("../images/paint/paint1.png") no-repeat center center/contain;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+#section2 .about .contents>div .paint:nth-of-type(1) {
+  top: 0;
+  left: 0;
+}
+
+#section2 .about .contents>div .paint:nth-of-type(2) {
+  top: 20%;
+  left: 15%;
+  background-image: url("../images/paint/paint2.png");
+}
+
+#section2 .about .contents>div .paint:nth-of-type(3) {
+  bottom: 1%;
+  left: 30%;
+  background-image: url("../images/paint/paint3.png");
+}
+
+#section2 .about .contents>div .paint:nth-of-type(4) {
+  width: 200px;
+  height: 200px;
+  bottom: 15%;
+  left: 3%;
+  background-image: url("../images/paint/paint15.png");
+}
+
+#section2 .about .contents>div .paint:nth-of-type(5) {
+  width: 170px;
+  height: 170px;
+  top: 3%;
+  right: 300px;
+  background-image: url("../images/paint/paint9.png");
+}
+
+#section2 .about .contents>div .paint:nth-of-type(6) {
+  top: 2%;
+  left: 40%;
+  background-image: url("../images/paint/paint13.png");
+}
+
+#section2 .about .contents>div .paint:nth-of-type(7) {
+  bottom: 5%;
+  right: 35%;
+  background-image: url("../images/paint/paint14.png");
+}
+
+#section2 .about .contents>div .paint:nth-of-type(8) {
+  width: 200px;
+  height: 200px;
+  bottom: 0%;
+  right: 7%;
+  background-image: url("../images/paint/paint8.png");
+}
+
+section.paint-page .paint {
+  --size: 35vmin;
+  position: fixed;
+  width: var(--size);
+  min-width: 35vmin;
+  max-width: 45vmin;
+  height: var(--size);
+  min-height: 35vmin;
+  max-height: 45vmin;
+  aspect-ratio: 1/1;
+  background: url("../images/paint/paint2.png") no-repeat center center/contain;
+  opacity: 0;
+  animation: popin 3.5s linear infinite;
+}
+section.paint-page .paint:nth-of-type(1) {
+  top: -5%;
+  left: -3%;
+}
+section.paint-page .paint:nth-of-type(2) {
+  top: -10%;
+  left: 13%;
+  background-image: url("../images/paint/paint3.png");
+  animation-delay: 0.4s;
+}
+section.paint-page .paint:nth-of-type(3) {
+  top: 23%;
+  left: -2%;
+  background-image: url("../images/paint/paint14.png");
+  animation-delay: 0.2s;
+}
+section.paint-page .paint:nth-of-type(4) {
+  top: 0%;
+  left: 19%;
+  background-image: url("../images/paint/paint7.png");
+  animation-delay: 0.1s;
+}
+section.paint-page .paint:nth-of-type(5) {
+  bottom: 17%;
+  left: -5%;
+  background-image: url("../images/paint/paint12.png");
+  animation-delay: 0.3s;
+}
+section.paint-page .paint:nth-of-type(6) {
+  bottom: -5%;
+  right: 1%;
+  background-image: url("../images/paint/paint14.png");
+  animation-delay: 0.4s;
+}
+section.paint-page .paint:nth-of-type(7) {
+  top: 0%;
+  left: 33%;
+  background-image: url("../images/paint/paint13.png");
+  animation-delay: 0.2s;
+}
+section.paint-page .paint:nth-of-type(8) {
+  top: -5%;
+  right: 30%;
+  background-image: url("../images/paint/paint15.png");
+  animation-delay: 0.1s;
+}
+section.paint-page .paint:nth-of-type(9) {
+  bottom: -5%;
+  right: 17%;
+  background-image: url("../images/paint/paint11.png");
+}
+section.paint-page .paint:nth-of-type(10) {
+  top: -5%;
+  right: 15%;
+  background-image: url("../images/paint/paint16.png");
+  animation-delay: 0.3s;
+}
+section.paint-page .paint:nth-of-type(11) {
+  bottom: -3%;
+  left: 2%;
+  background-image: url("../images/paint/paint16.png");
+}
+section.paint-page .paint:nth-of-type(12) {
+  bottom: 0%;
+  left: 18%;
+  background-image: url("../images/paint/paint9.png");
+  animation-delay: 0.4s;
+}
+section.paint-page .paint:nth-of-type(13) {
+  bottom: -10%;
+  left: 30%;
+  background-image: url("../images/paint/paint10.png");
+}
+section.paint-page .paint:nth-of-type(14) {
+  bottom: -6%;
+  right: 35%;
+  background-image: url("../images/paint/paint15.png");
+  animation-delay: 0.2s;
+}
+section.paint-page .paint:nth-of-type(15) {
+  top: -9%;
+  right: -1%;
+  background-image: url("../images/paint/paint8.png");
+}
+section.paint-page .paint:nth-of-type(16) {
+  bottom: 10%;
+  right: -5%;
+  background-image: url("../images/paint/paint13.png");
+  animation-delay: 0.1s;
+}
+section.paint-page .paint:nth-of-type(17) {
+  bottom: 40%;
+  right: -4%;
+  background-image: url("../images/paint/paint6.png");
+  animation-delay: 0.3s;
+}
+
+@keyframes popin {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

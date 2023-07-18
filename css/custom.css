@@ -81,7 +81,7 @@
   width: 100vw;
   height: 100vh;
   border-bottom-left-radius: 0%;
-  background-color: #fff;
+  background-color: #fdf8f2;
 }
 #header .menu-btn.active + nav .menu li {
   opacity: 1;
@@ -125,7 +125,7 @@
 }
 
 .wrap {
-  background-color: #0D0D0D;
+  background-color: #000;
 }
 section {
   position: relative;
@@ -133,7 +133,17 @@ section {
 section .tit {
   font-family: 'Philosopher', sans-serif;
 }
-
+section .gradient {
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  white-space: nowrap;
+  background-image: linear-gradient(-45deg, #2E148C, #222CF2, #EF3DF2, #A7D5F2, #F199F2, #A7D5F2, #EF3DF2, #222CF2,
+      #2E148C);
+  background-size: 250%;
+  animation: gradient-tit 2.5s ease-in-out alternate infinite;
+}
 
 /* Main */
 #section1 {
@@ -167,28 +177,37 @@ section .tit {
   left: 0;
   width: 100%;
   height: 300px;
-  background-color: #fff;
+  background: inherit;
 }
-#section2 .main {
+#section2 .about {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
 }
-#section2 .main .contents {
+#section2 .about .contents {
   display: flex;
   height: 100%;
-  background-color: #fff;
 }
-#section2 .main .contents > div {
+#section2 .about .contents > div {
   position: relative;
   width: 120vw;
   display: flex;
   align-items: center;
-  border: 1px solid #d4d4d4;
+  /* border: 1px solid #d4d4d4; */
   background-color: #fff;
+  background-blend-mode: lighten;
 }
-#section2 .main .contents .cont1 .about-tit {
+#section2 .about .contents .gap::before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background: url("../images/about-bg-top.png") repeat center top/cover;
+}
+#section2 .about .contents .cont1 .about-tit {
   font-size: 20rem;
   line-height: 0.8;
   text-align: right;
@@ -197,71 +216,74 @@ section .tit {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   margin-top: 200px;
+  transform: translateX(15%);
+  z-index: 1;
 }
-#section2 .main .contents .cont1 .my-photo {
+#section2 .about .contents .cont1 .my-photo {
   width: auto;
-  height: 90%;
+  height: 100%;
+  transform-origin: bottom;
+}
+#section2 .about .contents > div .highlight {
+  position: relative;
+  z-index: 1;
+}
+#section2 .about .contents > div:not(.cont1) .highlight::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -5%;
+  right: -3%;
+  bottom: -40%;
+  background: url("../images/point-brush.png") no-repeat 0 center/cover;
   z-index: -1;
 }
-#section2 .main .contents .cont1 .highlight {
-  /* color: #BDD9F2; */
-  text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    white-space: nowrap;
-    background-image: linear-gradient(-45deg, #e2ebf3, #D6E5F3, #CAE0F3,#BDD9F2, #CAE0F3, #D6E5F3, #e2ebf3);
-    background-size: 200%;
-    animation: gradient-tit 3s ease-in-out alternate infinite;
-}
-#section2 .main .contents > div .highlight {
-  color: #94C6F2;
-}
 
-#section2 .main .contents .cont2, #section2 .main .contents .cont3 {
+#section2 .about .contents .cont2, #section2 .about .contents .cont3 {
   justify-content: center;
 }
-#section2 .main .contents .cont2 .f-print {
+#section2 .about .contents div .f-print {
   position: absolute;
-  left: 0px;
+  left: -50px;
   bottom: 250px;
   background: url("../images/footprint.png") no-repeat center center/contain;
   width: 20px;
   height: 50px;
   transform: rotate(65deg);
 }
-#section2 .main .contents .cont2 .f-print:nth-of-type(2) {
-  left: 65px;
+#section2 .about .contents div .f-print:nth-of-type(2) {
+  left: 15px;
   bottom: 230px;
   transform: rotate(75deg) scaleX(-1);
 }
-#section2 .main .contents .cont2 .f-print:nth-of-type(3) {
-  left: 100px;
+#section2 .about .contents div .f-print:nth-of-type(3) {
+  left: 50px;
   bottom: 290px;
   transform: rotate(60deg);
 }
-#section2 .main .contents .cont2 .f-print:nth-of-type(4) {
-  left: 165px;
+#section2 .about .contents div .f-print:nth-of-type(4) {
+  left: 115px;
   bottom: 280px;
   transform: rotate(70deg) scaleX(-1);
 }
-#section2 .main .contents .cont2 .f-print:nth-of-type(5) {
-  left: 195px;
+#section2 .about .contents div .f-print:nth-of-type(5) {
+  left: 145px;
   bottom: 340px;
   transform: rotate(70deg);
 }
-#section2 .main .contents .cont2 .f-print:nth-of-type(6) {
-  left: 260px;
+#section2 .about .contents div .f-print:nth-of-type(6) {
+  left: 210px;
   bottom: 320px;
   transform: rotate(80deg) scaleX(-1);
 }
-#section2 .main .contents div .about-txt {
+#section2 .about .contents div .about-txt {
   position: relative;
   font-size: 7.5rem;
   line-height: 1.3;
   font-family: 'GangwonEdu_OTFBoldA';
+  z-index: 10;
 }
-#section2 .main .contents div .about-txt .info-txt {
+#section2 .about .contents div .about-txt .info-txt {
   position: absolute;
   bottom: 6%;
   right: -4%;
@@ -271,42 +293,46 @@ section .tit {
   color: #202020;
   opacity: 0;
 }
-#section2 .main .contents .cont2 .img-inner {
+#section2 .about .contents .cont2 .img-inner {
   position: relative;
   width: 300px;
 }
-#section2 .main .contents .cont2 .img-inner .my-photo {
+#section2 .about .contents .cont2 .img-inner .my-photo {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  width: 300px;
-  transform: translate(30%, -50%);
+  width: 350px;
+  transform: translate(-25%, -75%);
 }
-#section2 .main .contents .cont2 .img-inner .my-photo:nth-of-type(2) {
-  transform: translate(40%, -55%);
+#section2 .about .contents .cont2 .img-inner .my-photo:nth-of-type(2) {
+  transform: translate(0%, -50%);
   z-index: 1;
 }
-#section2 .main .contents .cont2 .img-inner .my-photo:nth-of-type(3) {
-  transform: translate(50%, -60%);
+#section2 .about .contents .cont2 .img-inner .my-photo:nth-of-type(3) {
+  width: 400px;
+  transform: translate(30%, -60%);
   z-index: 2;
 }
 
-#section2 .main .contents .cont3 .about-txt .info-txt {
+#section2 .about .contents .cont3 .about-txt {
+  margin-left: 80px;
+}
+#section2 .about .contents .cont3 .about-txt .info-txt {
   bottom: 7.5%;
   right: -2%;
   width: 70%;
 }
-#section2 .main .contents .cont3 .img-inner {
+#section2 .about .contents .cont3 .img-inner {
   position: relative;
 }
-#section2 .main .contents .cont3  .img-inner::before {
+#section2 .about .contents .cont3  .img-inner::before {
   content: "";
   position: absolute;
   right:20%;
   top: 8%;
   background: url("../images/about-home1.png") no-repeat center center/cover;
   width: 100px;
-  height: 110px;
+  height: 104px;
   opacity: 0.7;
   animation: img-change 3.5s infinite;
 }
@@ -324,33 +350,84 @@ section .tit {
     background-image: url("../images/about-home4.png");
   }
 }
-#section2 .main .contents .cont3 .img-inner .about-img {
+#section2 .about .contents .cont3 .img-inner .about-img {
   width: 400px;
   margin-left: 50px;
 }
 
 /* P-project Title */
 #section3 {
-  background-color: #0D0D0D;
-  height: 200vh;
-  margin-top: 5800px;
+  height: 300vh;
+  margin-top: 6200px;
+  background-color: #000;
 }
-#section3 .tit-inner {
+/* #section3 .noise-bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: url("../images/project-bg.png") repeat 0 0/cover;
+  background-attachment: fixed;
+  opacity: 0.7;
+  animation: noise 0.3s infinite;
+} */
+@keyframes noise {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  10% {
+    transform: translate(-5%, -5%)
+  }
+
+  20% {
+    transform: translate(-10%, 5%)
+  }
+
+  30% {
+    transform: translate(5%, -10%)
+  }
+
+  40% {
+    transform: translate(-5%, 15%)
+  }
+
+  50% {
+    transform: translate(-10%, 5%)
+  }
+
+  60% {
+    transform: translate(15%, 0)
+  }
+
+  70% {
+    transform: translate(0, 10%)
+  }
+
+  80% {
+    transform: translate(-15%, 0)
+  }
+
+  90% {
+    transform: translate(10%, 5%)
+  }
+
+  100% {
+    transform: translate(5%, 0)
+  }
+}
+#section3 .tit-inner, #section5 .tit-inner {
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 1;
 }
-#section3 .tit-inner .tit {
+#section3 .tit-inner .tit, #section5 .tit-inner .tit {
   padding-bottom: 6px;
   font-size: 10rem;
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  white-space: nowrap;
-  background-image: linear-gradient(-45deg, #F2F2F2, #9E9BF2, #8985F2, #2E27F2, #8985F2, #9E9BF2, #F2F2F2);
-  background-size: 300%;
-  animation: gradient-tit 3s ease-in-out alternate infinite;
 }
 @keyframes gradient-tit {
   0% {
@@ -363,60 +440,99 @@ section .tit {
 
 /* P-project */
 #section4 {
-  background-color: #F0F2F2;
+  background-color: #000;
+  z-index: 5;
 }
-#section4 .contents {
+#section4 .contents, #section6 .contents {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50vh 8%;
+  padding: 50vh 5%;
 }
-#section4 .contents > div  {
-  position: relative;
+#section4 .contents > div, #section6 .contents > div {
+  position: sticky;
+  top: 10vh;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
   height: 80vh;
-  padding: 30px;
-  margin-bottom: 10px;
-  border-radius: 30px;
+  padding: 60px;
+  margin-bottom: 100px;
   background-color: #fff;
 }
-#section4 .contents > div .number {
+#section4 .contents > div::before, #section6 .contents>div::before {
+  content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  font-size: 9rem;
+  width: 100%;
+  height: 100%;
+  background: url("../images/project-paper-bg.jpg") no-repeat center center/cover;
+  opacity: 0.3;
+}
+section .contents > div .number {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  font-size: 13rem;
   font-family: 'SUITE';
   font-weight: 900;
   z-index: 1;
 }
-#section4 .contents > div .inner {
-  
+#section4 .contents > div .inner, #section6 .contents > div .inner {
+  width: 50%;
+  z-index: 1;
 }
-#section4 .contents > div .inner .pj-tit {
-  font-size: 8rem;
+#section4 .contents > div .inner .pj-tit, #section6 .contents > div .inner .pj-tit {
+  font-size: 7.5rem;
   font-family: 'SUITE';
   font-weight: 900;
   text-transform: uppercase;
 }
-#section4 .contents>div .inner .pj-txt {
-  width: 90%;
+#section4 .contents > div .inner .pj-txt, #section6 .contents > div .inner .pj-txt {
+  margin-top: 40px;
   font-size: 2rem;
+  line-height: 1.5;
 }
-#section4 .contents > div .pj-img {
-  width: 50%;
-  height: 400px;
-  background: #fff url("../images/project-thumb1.jpg") no-repeat center center/cover;
+#section4 .contents > div .btn-inner, #section6 .contents > div .btn-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+#section4 .contents > div .btn-inner .view-btn, #section6 .contents > div .btn-inner .view-btn {
+  width: 49.5%;
+  padding: 10px 0;
+  color: #0D0D0D;
+  border: 1px solid #0D0D0D;
+  background: linear-gradient(135deg, #0D0D0D 0%, #0D0D0D 50%, transparent 50%) no-repeat;
+  background-size: 0% 100%;
+  transition: 0.3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+#section4 .contents > div .btn-inner .view-btn:hover, #section6 .contents > div .btn-inner .view-btn:hover {
+  color: #fff;
+  background-size: 250% 100%;
+}
+#section4 .contents > div .pj-img, #section6 .contents > div .pj-img {
+  width: 40%;
+  margin-top: -10px;
+  z-index: 1;
+}
+#section4 .contents > div .pj-img img, #section6 .contents > div .pj-img img {
+  width: 100%;
 }
 
 /* F-project Title */
 #section5 {
-  background-color: ivory;
+  height: 350vh;
+  background-color: #000;
 }
 
 /* F-project */
 #section6 {
-  background-color: ivory;
+  background-color: #000;
+  z-index: 10;
 }

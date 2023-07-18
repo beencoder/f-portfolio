@@ -65,7 +65,7 @@ html {
 body, button, input, select, table, textarea {
   font-family: 'SUITE';
   line-height: 1;
-  color: #0D0D0D;
+  /* color: #0D0D0D; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
