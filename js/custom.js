@@ -1,4 +1,78 @@
 $(function () {
+  // Loading
+  const animationOptions = {
+    ease: "expo.inOut"
+  };
+
+  const introAnimation = () => {
+    const tl = gsap.timeline({
+      defaults: {
+        ease: animationOptions.ease,
+        duration: 1
+      }
+    });
+
+    tl.to(".loading .loading-tit", {
+      duration: 1,
+      y: 0,
+      autoAlpha: 1,
+    }).
+    to(".loading .bg-l, .loading .bg-r", {
+      scaleX: 1
+    }).
+    to(".loading .bg-l, .loading .bg-r", {
+      scaleY: 0,
+      transformOrigin: "top center"
+    }).
+    to(".loading .loading-tit", {
+      duration: 1,
+      y: -60,
+      autoAlpha: 0
+    },"-=0.6").
+    to(".loading", {
+      y: "-150%"
+    },"-=0.5");
+
+    return tl;
+  };
+
+  const skewInElements = e => {
+    const tl = gsap.timeline();
+
+    tl.from(e, {
+      duration: 1.1,
+      ease: animationOptions.ease,
+      opacity: 0,
+      autoAlpha: 0,
+    });
+
+    return tl;
+  };
+
+  const master = gsap.timeline({
+    paused: false,
+    delay: 0.2
+  });
+
+  master.add(introAnimation())
+    .add(skewInElements("#section1"), "-=1");
+  
+  // Images Loaded
+  $("body").imagesLoaded()
+  .always( function( instance ) {
+    console.log("all images loaded");
+  })
+  .done( function( instance ) {
+    console.log("all images successfully loaded");
+  })
+  .fail( function() {
+    console.log("all images loaded, at least one is broken");
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? "loaded" : "broken";
+    console.log(`image is ${result} for ${image.img.src}`);
+  });
+  
   // Scroll Coord
   window.addEventListener("scroll", () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
@@ -104,7 +178,6 @@ $(function () {
     el.onmouseenter = (event) => {
       const targetEl = event.target.querySelector("h4");
       let iteration = 0;
-      console.log(targetEl.dataset.value)
       const interval = setInterval(() => {
         targetEl.innerText = targetEl.innerText
           .split("")

@@ -20,8 +20,8 @@
 
 <body>
   <!-- Loading -->
-  <section class="loading" style="display: none;">
-    <p class="loading-tit">welcome to my portfolio</p>
+  <section class="loading">
+    <p class="loading-tit hidden">My dream is to be a...</p>
     <div class="bg bg-l"></div>
     <div class="bg bg-r"></div>
   </section>
@@ -451,7 +451,7 @@
             <span class="number common">02</span>
             <h4 class="script-name common" data-value="Tetris Game">Tetris Game</h4>
             <span class="script-txt">javascript로 제작한 테트리스 게임입니다.<br>방향키로 블록을 쌓고 한 줄이 채워지면 점수를 얻고 맨 위까지 쌓일 시 게임 오버가 되도록 구현하였습니다.<br>플레이 버튼을 눌러 추억의 테트리스 게임을 해보세요!</span>
-            <button class="play-btn" onclick="toggleModal(this, 'open')"><span class="material-icons">play_arrow</span></button>
+            <button class="play-btn"><span class="material-icons">play_arrow</span></button>
             <div class="script-img">
               <img src="images/script-img2.png" alt="테트리스이미지">
             </div>
@@ -472,7 +472,7 @@
             <span class="number common">03</span>
             <h4 class="script-name common" data-value="Memory Game">Memory Game</h4>
             <span class="script-txt">javascript로 제작한 기억력 게임입니다.<br>카드를 클릭하며 뒤집어진 카드들의 위치를 기억하고 모든 쌍을 찾으면 게임이 끝나도록 구현하였습니다.<br>플레이 버튼을 눌러 기억력이 좋은지 확인해보세요!</span>
-            <button class="play-btn" onclick="toggleModal(this, 'open')"><span class="material-icons">play_arrow</span></button>
+            <button class="play-btn"><span class="material-icons">play_arrow</span></button>
             <div class="script-img">
               <img src="images/script-img3.jpg" alt="카드이미지">
             </div>
@@ -493,7 +493,7 @@
             <span class="number common">04</span>
             <h4 class="script-name common" data-value="Typing Game">Typing Game</h4>
             <span class="script-txt">javascript로 제작한 타이핑 게임입니다.<br>시작 버튼을 눌러 화면에 보이는 영단어를 6초 안으로 오타 없이 타이핑해야만 점수를 얻도록 구현하였습니다.<br>플레이 버튼을 눌러 업무 전 손풀기 운동을 해보세요!</span>
-            <button class="play-btn" onclick="toggleModal(this, 'open')"><span class="material-icons">play_arrow</span></button>
+            <button class="play-btn"><span class="material-icons">play_arrow</span></button>
             <div class="script-img">
               <img src="images/script-img4.jpg" alt="키보드이미지">
             </div>
@@ -583,31 +583,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   <script src="js/skrollr.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <!--  Custom JS  -->
   <script src="js/custom.js"></script>
   <script>
     function changeImg(item, i) {
       item.nextElementSibling.src = `images/project-thumb${i}.png`;
       item.style.display = "none";
-    }
-
-    function toggleModal(item, state) {
-      if (state === "open") {
-        document.body.classList.add("modal-active");
-        item.nextElementSibling.nextElementSibling.nextElementSibling.querySelector(".expand").classList.add("active");
-        item.nextElementSibling.style.display = "block";
-        // setTimeout(function () { 
-          item.nextElementSibling.children[0].classList.add("active");
-        // }, 800);
-
-        console.log($(this))
-      }
-      else if (state === "close") {
-        document.body.classList.remove("modal-active");
-        item.parentElement.parentElement.nextElementSibling.nextElementSibling.querySelector(".expand").classList.remove("active");
-        item.parentElement.parentElement.style.display = "none";
-        item.parentElement.style.display = "none";
-      }
     }
   </script>
 </body>
