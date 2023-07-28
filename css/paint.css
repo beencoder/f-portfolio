@@ -1,4 +1,4 @@
-#section2 .about .contents>div .paint {
+#section2 .about .contents > div .paint {
   position: absolute;
   width: 230px;
   height: 230px;
@@ -7,24 +7,24 @@
   z-index: -1;
 }
 
-#section2 .about .contents>div .paint:nth-of-type(1) {
+#section2 .about .contents > div .paint:nth-of-type(1) {
   top: 0;
   left: 0;
 }
 
-#section2 .about .contents>div .paint:nth-of-type(2) {
+#section2 .about .contents > div .paint:nth-of-type(2) {
   top: 20%;
   left: 15%;
   background-image: url("../images/paint/paint2.png");
 }
 
-#section2 .about .contents>div .paint:nth-of-type(3) {
+#section2 .about .contents > div .paint:nth-of-type(3) {
   bottom: 1%;
   left: 30%;
   background-image: url("../images/paint/paint3.png");
 }
 
-#section2 .about .contents>div .paint:nth-of-type(4) {
+#section2 .about .contents > div .paint:nth-of-type(4) {
   width: 200px;
   height: 200px;
   bottom: 15%;
@@ -32,7 +32,7 @@
   background-image: url("../images/paint/paint15.png");
 }
 
-#section2 .about .contents>div .paint:nth-of-type(5) {
+#section2 .about .contents > div .paint:nth-of-type(5) {
   width: 170px;
   height: 170px;
   top: 3%;
@@ -40,19 +40,19 @@
   background-image: url("../images/paint/paint9.png");
 }
 
-#section2 .about .contents>div .paint:nth-of-type(6) {
+#section2 .about .contents > div .paint:nth-of-type(6) {
   top: 2%;
   left: 40%;
   background-image: url("../images/paint/paint13.png");
 }
 
-#section2 .about .contents>div .paint:nth-of-type(7) {
+#section2 .about .contents > div .paint:nth-of-type(7) {
   bottom: 5%;
   right: 35%;
   background-image: url("../images/paint/paint14.png");
 }
 
-#section2 .about .contents>div .paint:nth-of-type(8) {
+#section2 .about .contents > div .paint:nth-of-type(8) {
   width: 200px;
   height: 200px;
   bottom: 0%;
