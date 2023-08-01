@@ -82,7 +82,7 @@ $(function () {
 
   // Skrollr
   let s = skrollr.init({
-    forceHeight: false,
+    // forceHeight: false,
     smoothScrolling: true,
     smoothScrollingDuration: 200
   });
@@ -91,6 +91,27 @@ $(function () {
   $(".menu-btn").on("click",function(){
     $(this).toggleClass("active");
   });
+
+  const menuList = document.querySelectorAll(".menu li a");
+  menuList.forEach((item) => {
+    item.addEventListener("click", () => {
+      switch (item.textContent) {
+        case "Home":
+          item.href = "#section1"
+          break;
+        case "Project":
+          item.href = "#section4"
+          break;
+        case "Script":
+          item.href = "#section8"
+          break;
+        case "Contact":
+          item.href = "#section11"
+          break;
+      }
+      document.querySelector(".menu-btn").classList.remove("active");
+    });
+  })
 
   // About star
   // function addStar() {
@@ -228,7 +249,7 @@ function addPaint() {
     for (let s = 0; s < 17; s++) {
       const paint = document.createElement("span");
       paint.className = "paint";
-      paint.style.setProperty("--size", Math.random() * 50 + "vmin");
+      paint.style.setProperty("--size", Math.random() * 40 + "vmin");
       document.querySelector(`#${titPages[i].offsetParent.id} .${titPages[i].className}`).appendChild(paint);
     }
   }

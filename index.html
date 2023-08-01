@@ -20,11 +20,11 @@
 
 <body>
   <!-- Loading -->
-  <section class="loading">
+  <!-- <section class="loading">
     <p class="loading-tit hidden">My dream is to be a...</p>
     <div class="bg bg-l"></div>
     <div class="bg bg-r"></div>
-  </section>
+  </section> -->
   <div class="scroll">0</div>
 
   <!-- Header -->
@@ -37,10 +37,9 @@
       <ul class="menu">
         <!-- <li>Creative, Front-end</li> -->
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="#">Project</a></li>
-        <!-- <li><a href="">Script</a></li> -->
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Script</a></li>
+        <li><a href="#section11">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -48,8 +47,8 @@
   <div class="wrap">
     <!-- Main str -->
     <section id="section1" data-0="visibility: visible;" data-2000="visibility: hidden;">
-      <div class="main-bg"></div>
-      <svg class="blob-inner">
+      <div class="main-bg" data-0="display: block;" data-2000="display: none;"></div>
+      <svg class="blob-inner" data-0="display: block;" data-2000="display: none;">
         <image xlink:href="https://images.unsplash.com/photo-1664228581057-d7df1ecf7f14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" mask="url(#mask)" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" />
         <defs>
           <filter id="gooey" height="130%">
@@ -81,7 +80,7 @@
         </mask>
       </svg>
       <div class="tit-inner">
-        <div class="inner" data-0="transform: translateY(0%);" data-700="transform: translateY(50%);">
+        <div class="inner" data-0="transform: translateY(0%); display: block;" data-700="transform: translateY(50%);" data-2000="display: none;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.4 50.5" xml:space="preserve" data-0="transform: translateY(0%);" data-700="transform: translateY(-50%);">
             <style type="text/css">
               .st0 {
@@ -107,7 +106,7 @@
             </g>
           </svg>
         </div>
-        <div class="inner" data-0="transform: translateY(100%);" data-700="transform: translateY(50%);">
+        <div class="inner" data-0="transform: translateY(100%); display: block;" data-700="transform: translateY(50%);" data-2000="display: none;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.8 50.5" style="enable-background:new 0 0 143.8 50.5;" xml:space="preserve" data-0="transform: translateY(-100%);" data-700="transform: translateY(-50%);">
             <style type="text/css">
               .st0 {
@@ -164,9 +163,9 @@
     </section>
     <!-- // About end -->
 
-    <section id="section3" class="paint-page">
+    <section id="section3" class="paint-page tit-page">
       <div class="tit-inner">
-        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-7700="visibility: visible; transform: translate(-50%, -50%) scale(0.2); opacity: 0;" data-8500="transform: translate(-50%, -50%) scale(1); opacity: 1;" data-12500="display: none;">Publishing Portfolio</h3>
+        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-7700="visibility: visible; transform: translate(-50%, -50%) scale(0); opacity: 0;" data-8500="transform: translate(-50%, -50%) scale(1); opacity: 1;" data-12500="display: none;">Publishing Portfolio</h3>
       </div>
       <div class="paint-bg" data-6400="display: none;" data-7200="display: block;" data-12500="display: none;">
       </div>
@@ -343,9 +342,9 @@
     </section>
     <!-- // P-project end -->
 
-    <section id="section5" class="paint-page">
+    <section id="section5" class="paint-page tit-page">
       <div class="tit-inner">
-        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-18500="visibility: visible; transform: translate(-50%, -50%) scale(0.2); opacity: 0;" data-19300="transform: translate(-50%, -50%) scale(1); opacity: 1;" data-23300="display: none;">Frontend Portfolio</h3>
+        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-18500="visibility: visible; transform: translate(-50%, -50%) scale(0); opacity: 0;" data-19300="transform: translate(-50%, -50%) scale(1); opacity: 1;" data-23300="display: none;">Frontend Portfolio</h3>
       </div>
       <div class="paint-bg" data-16000="display: none;" data-16001="display: block;" data-23300="display: none;">
       </div>
@@ -411,13 +410,13 @@
     </section>
     <!-- // F-project end -->
 
-    <section id="section7" class="paint-page">
+    <section id="section7" class="tit-page">
       <div class="tit-inner">
-        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-24600="visibility: visible; transform: translate(-150%, -50%); opacity: 0;"
-          data-25100="transform: translate(-50%, -50%); opacity: 1;" data-28000="display: none;">Script
+        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-24800="visibility: visible; transform: translate(-150%, -50%); opacity: 0;"
+          data-25200="transform: translate(-50%, -50%); opacity: 1;" data-25800="transform: translate(-50%, -50%); opacity: 1;" data-26400="transform: translate(50%, -50%); opacity: 0;" data-28000="display: none;">Script
         </h3>
       </div>
-      <div class="paint-bg" data-22000="display: none;" data-22001="display: block;" data-28000="display: none;">
+      <div class="circle opaque" data-24000="width: 0vw; height: 0vw; opacity: 0.1; display: block;" data-25000="width: 200vw; height: 200vw; opacity: 0;" data-25001="display: none;"></div>
       </div>
     </section>
 
@@ -514,29 +513,35 @@
     </section>
     <!-- // Script end -->
 
-    <section id="section9">
-      <h3 class="tit">animation</h3>
+    <section id="section9" data-0="display: none;" data-29199="display: block; visibility: hidden;" data-29200="visibility: visible;">
+      <div class="tit-inner">
+        <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-30300="visibility: visible; transform: translate(-150%, -50%); opacity: 0;" data-30700="transform: translate(-50%, -50%); opacity: 1;" data-32000="transform: translate(-50%, -50%); opacity: 1;" data-32400="transform: translate(50%, -50%); opacity: 0;">Animation</h3>
+      </div>
+      <div class="circle" data-29200="width: 200vw; height: 200vw; display: block;" data-30200="width: 0vw; height: 0vw;" data-30201="display: none;"></div>
     </section>
 
     <!-- Animation str -->
-    <section id="section10">
+    <section id="section10" data-32600="visibility: hidden; opacity: 0;" data-32601="visibility: visible;" data-32900="opacity: 1;">
       <div class="ani">
-        <div class="inner">
-          <div class="cont1">
-            <h4 class="ani-tit">Bubble Animation</h4>
+        <div class="contents">
+          <div class="cont1" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);">
+            <h4 class="ani-tit">Fireworks<br>Canvas<br>Animation</h4>
             <iframe src="" frameborder="0"></iframe>
           </div>
 
-          <div class="cont2">
-            <h4 class="ani-tit">Canvas Animation</h4>
+          <div class="cont2" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);" data-36200="transform: translateX(-200%);">
+            <h4 class="ani-tit">Canvas<br>Animation</h4>
             <iframe src="" frameborder="0"></iframe>
           </div>
 
-          <div class="cont3">
-            <h4 class="ani-tit">Canvas Animation</h4>
+          <div class="cont3" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);" data-36200="transform: translateX(-200%);" data-37400="transform: translateX(-300%);">
+            <h4 class="ani-tit">Canvas<br>Animation</h4>
             <iframe src="" frameborder="0"></iframe>
           </div>
         </div>
+      </div>
+      <div id="cvs">
+        <canvas id="canvas1"></canvas>
       </div>
     </section>
     <!-- // Animation end -->
@@ -585,6 +590,7 @@
   <script src="js/skrollr.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <!--  Custom JS  -->
+  <script type="module" src="js/canvas_1.js"></script>
   <script src="js/custom.js"></script>
   <script>
     function changeImg(item, i) {
