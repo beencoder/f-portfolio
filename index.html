@@ -416,8 +416,10 @@
           data-25200="transform: translate(-50%, -50%); opacity: 1;" data-25800="transform: translate(-50%, -50%); opacity: 1;" data-26400="transform: translate(50%, -50%); opacity: 0;" data-28000="display: none;">Script
         </h3>
       </div>
-      <div class="circle opaque" data-24000="width: 0vw; height: 0vw; opacity: 0.1; display: block;" data-25000="width: 200vw; height: 200vw; opacity: 0;" data-25001="display: none;"></div>
+      <div class="inner" data-24500="opacity: 0; display: block;" data-25000="opacity: 1;" data-28000="display: none;">
+        <canvas id="canvas1"></canvas>
       </div>
+      <div class="circle" data-24000="width: 0vw; height: 0vw; opacity: 0.2; display: block;" data-25000="width: 200vw; height: 200vw; opacity: 0;" data-25001="display: none;"></div>
     </section>
 
     <!-- Script str -->
@@ -513,45 +515,53 @@
     </section>
     <!-- // Script end -->
 
-    <section id="section9" data-0="display: none;" data-29199="display: block; visibility: hidden;" data-29200="visibility: visible;">
+    <section id="section9" data-0="display: none;" data-29199="display: block; visibility: hidden;" data-29200="visibility: visible;" data-32900="display: block;" data-32901="display: none;">
       <div class="tit-inner">
         <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-30300="visibility: visible; transform: translate(-150%, -50%); opacity: 0;" data-30700="transform: translate(-50%, -50%); opacity: 1;" data-32000="transform: translate(-50%, -50%); opacity: 1;" data-32400="transform: translate(50%, -50%); opacity: 0;">Animation</h3>
       </div>
-      <div class="circle" data-29200="width: 200vw; height: 200vw; display: block;" data-30200="width: 0vw; height: 0vw;" data-30201="display: none;"></div>
+      <div class="inner" data-29700="opacity: 0; display: block;" data-30200="opacity: 1;">
+        <canvas id="canvas2"></canvas>
+      </div>
+      <div class="circle" data-29200="width: 0vw; height: 0vw; opacity: 0.2; display: block;" data-30200="width: 200vw; height: 200vw; opacity: 0;" data-30201="display: none;"></div>
     </section>
 
     <!-- Animation str -->
-    <section id="section10" data-32600="visibility: hidden; opacity: 0;" data-32601="visibility: visible;" data-32900="opacity: 1;">
+    <section id="section10" data-32600="visibility: hidden; opacity: 0;" data-32601="visibility: visible;" data-32900="opacity: 1;" data-37400="left: 0%;" data-38800="left: -100%;">
       <div class="ani">
         <div class="contents">
           <div class="cont1" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);">
-            <h4 class="ani-tit">Fireworks<br>Canvas<br>Animation</h4>
-            <iframe src="" frameborder="0"></iframe>
+            <h4 class="ani-tit">Text Svg<br>Animation</h4>
+            <iframe src="ani/ani01.html" frameborder="0"></iframe>
+            <div class="bg-img"></div>
           </div>
 
           <div class="cont2" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);" data-36200="transform: translateX(-200%);">
-            <h4 class="ani-tit">Canvas<br>Animation</h4>
-            <iframe src="" frameborder="0"></iframe>
+            <h4 class="ani-tit">Bubble Canvas<br>Animation</h4>
+            <iframe src="ani/ani02.html" frameborder="0"></iframe>
+            <div class="bg-img"></div>
           </div>
 
           <div class="cont3" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);" data-36200="transform: translateX(-200%);" data-37400="transform: translateX(-300%);">
-            <h4 class="ani-tit">Canvas<br>Animation</h4>
-            <iframe src="" frameborder="0"></iframe>
+            <h4 class="ani-tit">Sparks Canvas<br>Animation</h4>
+            <iframe src="ani/ani03.html" frameborder="0"></iframe>
+            <div class="bg-img"></div>
           </div>
         </div>
       </div>
       <div id="cvs">
-        <canvas id="canvas1"></canvas>
+        <canvas id="canvas3"></canvas>
       </div>
     </section>
     <!-- // Animation end -->
 
     <!-- Profile str -->
-    <section id="section11">
+    <section id="section11" data-37399="visibility: hidden;" data-37400="visibility: visible;">
       <h3 class="blind">profile</h3>
-      <img src="" alt="카메라" class="camera">
-      <img src="" alt="조명" class="light">
-      <div class="profile">
+      <div class="img-inner">
+      <img src="images/profile-camera.png" alt="카메라" class="camera" data-39400="transform: translate(-50%, -50%) scale(0.2); opacity: 0;" data-40000="transform: translate(-50%, -50%) scale(1); opacity: 1;">
+      <img src="images/profile-light.png" alt="조명" class="light" data-40200="transform: translate(0%, -50%) scale(0.1); opacity: 0;" data-40500="transform: translate(0%, -50%) scale(2); opacity: 1" data-40600="transform: translate(0%, -50%) scale(0); opacity: 0">
+      </div>
+      <div class="profile" data-40600="transform: rotate(0deg) scale(0.3); opacity: 0;" data-40800="opacity: 1;" data-41200="transform: rotate(0deg) scale(0.3);" data-42000="transform: rotate(360deg) scale(1);">
         <div class="my-photo">
           <img src="" alt="프로필사진">
         </div>
@@ -589,8 +599,19 @@
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   <script src="js/skrollr.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js" crossorigin="anonymous"></script>
+  <script type="importmap">
+    {
+      "imports": {      
+        "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.154.0/examples/jsm/"
+      }
+    }
+  </script>
   <!--  Custom JS  -->
   <script type="module" src="js/canvas_1.js"></script>
+  <script type="module" src="js/canvas_2.js"></script>
+  <script type="module" src="js/canvas_3.js"></script>
   <script src="js/custom.js"></script>
   <script>
     function changeImg(item, i) {

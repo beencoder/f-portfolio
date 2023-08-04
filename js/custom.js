@@ -232,27 +232,35 @@ $(function () {
   
 });
 
-// Add Paint Element
-function addPaint() {
-  const contents = document.querySelectorAll(".about .cont1, .about .cont2, .about .cont3");
-  const titPages = document.querySelectorAll(".paint-bg");
+// Add Elements
+function addElements() {
+  const aboutCont = document.querySelectorAll(".about .cont1, .about .cont2, .about .cont3");
+  const paintInner = document.querySelectorAll(".paint-bg");
+  const aniCont = document.querySelectorAll(".ani .cont1, .ani .cont2, .ani .cont3");
 
-  for (let i = 0; i < contents.length; i++) {
+  for (let i = 0; i < aboutCont.length; i++) {
     for (let s = 0; s < 8; s++) {
       const paint = document.createElement("span");
       paint.className = "paint";
-      document.querySelector(`.${contents[i].className}`).appendChild(paint);
+      document.querySelector(`.${aboutCont[i].className}`).appendChild(paint);
     }
   }
 
-  for (let i = 0; i < titPages.length; i++) {
+  for (let i = 0; i < paintInner.length; i++) {
     for (let s = 0; s < 17; s++) {
       const paint = document.createElement("span");
       paint.className = "paint";
       paint.style.setProperty("--size", Math.random() * 40 + "vmin");
-      document.querySelector(`#${titPages[i].offsetParent.id} .${titPages[i].className}`).appendChild(paint);
+      document.querySelector(`#${paintInner[i].offsetParent.id} .${paintInner[i].className}`).appendChild(paint);
+    }
+  }
+
+  for (let i = 0; i < aniCont.length; i++) {
+    for (let s = 0; s < 6; s++) {
+      const img = document.createElement("span");
+      document.querySelector(`.${aboutCont[i].className} .bg-img`).appendChild(img);
     }
   }
   
 }
-addPaint();
+addElements();
