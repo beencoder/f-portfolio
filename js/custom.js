@@ -92,21 +92,28 @@ $(function () {
     $(this).toggleClass("active");
   });
 
+  function goToScroll(name) {
+    let location = document.querySelector(`#${name}`).offsetTop;
+    window.scrollTo({top: location});
+  }
+
   const menuList = document.querySelectorAll(".menu li a");
   menuList.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+
       switch (item.textContent) {
-        case "Home":
-          item.href = "#section1"
+        case "About":
+          window.scrollTo({top: 2000});
           break;
         case "Project":
-          item.href = "#section4"
+          goToScroll("section4");
           break;
         case "Script":
-          item.href = "#section8"
+          goToScroll("section8");
           break;
         case "Contact":
-          item.href = "#section11"
+          window.scrollTo({top: 43400});
           break;
       }
       document.querySelector(".menu-btn").classList.remove("active");

@@ -358,10 +358,10 @@ section canvas:not(#canvas3) {
 #section2 .about .contents > div:not(.cont1) .highlight::before {
   content: "";
   position: absolute;
-  top: -80%;
+  top: -70%;
   left: -5%;
   right: -3%;
-  bottom: -40%;
+  bottom: -25%;
   background: url("../images/point-brush.png") no-repeat 0 center/cover;
   z-index: -1;
 }
@@ -910,6 +910,7 @@ section canvas:not(#canvas3) {
   width: 100%;
   height: 100vh;
   background: url("../images/animation-bg2.jpg") no-repeat center center/cover;
+  overflow: hidden;
   z-index: 11;
 }
 #section10 #canvas3 {
@@ -1144,7 +1145,7 @@ section canvas:not(#canvas3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-image: linear-gradient(-45deg, #9CA656, #B4D99A, #9CD9BC, #7EE7F2);
 }
 #section11 .img-inner {
   position: relative;
@@ -1164,9 +1165,46 @@ section canvas:not(#canvas3) {
   top: 40%;
   right: -10%;
 }
+#section11 .img-inner .my-photo {
+  width: 40%;
+  top: 50%;
+  left: 50%;
+}
+#section11 .my-photo {
+  width: 20%;
+  max-width: 300px;
+  border: 14px solid #fff;
+}
 #section11 .profile {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/profile-bg.jpg") no-repeat center center/cover;
+  font-family: 'NeoDunggeunmoPro-Regular';
+}
+#section11 .profile .prof-tit {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#section11 .profile .info {
+  margin: 0 100px;
+}
+#section11 .profile .info .inner {
+  display: flex;
+  justify-content: center;
+}
+#section11 .profile .info .inner ul:first-of-type {
+  margin-right: 30px;
+}
+#section11 .profile .info .inner ul li {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+#section11 .profile .skill img {
+  max-width: 200px;
 }
