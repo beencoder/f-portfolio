@@ -74,11 +74,11 @@ $(function () {
   });
   
   // Scroll Coord
-  window.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+  // window.addEventListener("scroll", () => {
+  //   let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-    document.querySelector(".scroll").innerText = Math.round(scrollTop);
-  });
+  //   document.querySelector(".scroll").innerText = Math.round(scrollTop);
+  // });
 
   // Skrollr
   let s = skrollr.init({
