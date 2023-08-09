@@ -3,7 +3,7 @@
 body.modal-active {
   overflow: hidden;
 }
-.scroll {
+/* .scroll {
   position: fixed;
   left: 10px;
   top: 10px;
@@ -15,7 +15,7 @@ body.modal-active {
   text-align: center;
   font-size: 1.4rem;
   line-height: 48px;
-}
+} */
 
 /* Loading */
 .hidden {
@@ -29,8 +29,6 @@ body.modal-active {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100vh;
   transform: translate(-50%, -50%);
   background-color: #000;
   overflow: hidden;
@@ -64,9 +62,6 @@ body.modal-active {
 
 /* header */
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 100;
 }
@@ -262,11 +257,13 @@ section .circle {
   background-color: #A7D5F2;
   filter: opacity(0.8);
 }
-section canvas:not(#canvas3) {
+.fix {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+}
+.full {
+  width: 100%;
   height: 100vh;
 }
 
@@ -276,13 +273,11 @@ section canvas:not(#canvas3) {
   height: 2000px;
 }
 #section1 .tit-inner {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 160fr 103fr;
   position: fixed;
   top: 0;
   left: 0;
+  display: grid;
+  grid-template-columns: 160fr 103fr;
   padding: 60px;
 }
 #section1 .tit-inner .inner {
@@ -483,64 +478,6 @@ section canvas:not(#canvas3) {
 /* P-project Title */
 #section3 {
   margin-top: 6500px;
-}
-/* #section3 .noise-bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200%;
-  background: url("../images/project-bg.png") repeat 0 0/cover;
-  background-attachment: fixed;
-  opacity: 0.7;
-  animation: noise 0.3s infinite;
-} */
-@keyframes noise {
-  0% {
-    transform: translate(0, 0)
-  }
-
-  10% {
-    transform: translate(-5%, -5%)
-  }
-
-  20% {
-    transform: translate(-10%, 5%)
-  }
-
-  30% {
-    transform: translate(5%, -10%)
-  }
-
-  40% {
-    transform: translate(-5%, 15%)
-  }
-
-  50% {
-    transform: translate(-10%, 5%)
-  }
-
-  60% {
-    transform: translate(15%, 0)
-  }
-
-  70% {
-    transform: translate(0, 10%)
-  }
-
-  80% {
-    transform: translate(-15%, 0)
-  }
-
-  90% {
-    transform: translate(10%, 5%)
-  }
-
-  100% {
-    transform: translate(5%, 0)
-  }
 }
 
 /* P-project + F-project */
@@ -803,21 +740,15 @@ section canvas:not(#canvas3) {
 #section8 .script .script-list .item:hover .script-img img {
   opacity: 1;
 }
-
-#section8 #modal-inner {
+#section8 .modal-inner {
   display: table;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   transform: scale(0);
   z-index: 1000;
 }
-#section8 #modal-inner.active {
+#section8 .modal-inner.active {
   transform: scale(1);
 }
-#section8 #modal-inner.active .modal-bg {
+#section8 .modal-inner.active .modal-bg {
   background-color: rgba(0, 0, 0, 0);
   animation: bg-fade-in 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
@@ -829,7 +760,7 @@ section canvas:not(#canvas3) {
     background: rgba(0, 0, 0, 0.7);
   }
 }
-#section8 #modal-inner.active .modal-bg .modal {
+#section8 .modal-inner.active .modal-bg .modal {
   animation: expand 1s forwards;
 }
 @keyframes expand {
@@ -849,7 +780,7 @@ section canvas:not(#canvas3) {
     border-radius: 0px;
   }
 }
-#section8 #modal-inner.active .modal-bg .modal iframe {
+#section8 .modal-inner.active .modal-bg .modal iframe {
   position: relative;
   opacity: 0;
   animation: fade-in 0.5s 1s linear forwards;
@@ -862,13 +793,13 @@ section canvas:not(#canvas3) {
     opacity: 1;
   }
 }
-#section8 #modal-inner .modal-bg {
+#section8 .modal-inner .modal-bg {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   background-color: rgba(0, 0, 0, 0.8);
 }
-#section8 #modal-inner .modal-bg .modal {
+#section8 .modal-inner .modal-bg .modal {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -876,39 +807,29 @@ section canvas:not(#canvas3) {
   border-radius: 80px;
   background-color: #fff;
 }
-#section8 #modal-inner .modal-bg .modal iframe {
+#section8 .modal-inner .modal-bg .modal iframe {
   width: 100%;
   height: 100%;
 }
-#section8 #modal-inner.active .modal-bg .modal .close-btn {
+#section8 .modal-inner.active .modal-bg .modal .close-btn {
   position: absolute;
   top: 3%;
   right: 2%;
   opacity: 0;
   animation: fade-in 0.5s 1s linear forwards;
 }
-#section8 .item:nth-of-type(3) #modal-inner .modal-bg .modal .close-btn span, #section8 .item:nth-of-type(4) #modal-inner .modal-bg .modal .close-btn span {
+#section8 .item:nth-of-type(3) .modal-inner .modal-bg .modal .close-btn span, #section8 .item:nth-of-type(4) .modal-inner .modal-bg .modal .close-btn span {
   color: #000;
 }
 
 /* Animation Title */
 #section9 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   background: #000;
   z-index: 10;
 }
 
 /* Animation */
 #section10 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   background: url("../images/animation-bg2.jpg") no-repeat center center/cover;
   overflow: hidden;
   z-index: 11;
@@ -1137,11 +1058,6 @@ section canvas:not(#canvas3) {
 
 /* Profile */
 #section11 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1177,8 +1093,6 @@ section canvas:not(#canvas3) {
 }
 #section11 .profile {
   position: fixed;
-  width: 100%;
-  height: 100%;
   padding: 0 10vw;
   display: flex;
   justify-content: center;

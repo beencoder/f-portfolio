@@ -228,12 +228,12 @@ $(function () {
 
   // Modal
   $(".play-btn").click(function () {
-    $(this).siblings("#modal-inner").addClass("active");
+    $(this).siblings(".modal-inner").addClass("active");
     $("body").addClass("modal-active");
   });
 
   $(".close-btn").click(function () {
-    $(this).closest("#modal-inner").removeClass("active");
+    $(this).closest(".modal-inner").removeClass("active");
     $("body").removeClass("modal-active");
   });
   

@@ -20,22 +20,21 @@
 
 <body>
   <!-- Loading -->
-  <!-- <section class="loading">
+  <section class="loading full">
     <p class="loading-tit hidden">My dream is to be a...</p>
     <div class="bg bg-l"></div>
     <div class="bg bg-r"></div>
-  </section> -->
-  <div class="scroll">0</div>
+  </section>
+  <!-- <div class="scroll">0</div> -->
 
   <!-- Header -->
-  <header id="header">
+  <header id="header" class="fix">
     <h1 class="title" data-1900="opacity: 0;" data-2000="opacity: 1;" data-6800="color: rgb(0, 0, 0);" data-7200="color: rgb(255, 255, 255);">DABEEN's PORTFOLIO</h1>
     <button class="menu-btn">
       <span class="menu-icon"></span>
     </button>
     <nav>
       <ul class="menu">
-        <!-- <li>Creative, Front-end</li> -->
         <li><a href="#">About</a></li>
         <li><a href="#">Project</a></li>
         <li><a href="#">Script</a></li>
@@ -79,7 +78,7 @@
             </g>
         </mask>
       </svg>
-      <div class="tit-inner">
+      <div class="tit-inner full">
         <div class="inner" data-0="transform: translateY(0%); display: block;" data-700="transform: translateY(50%);" data-2000="display: none;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.4 50.5" xml:space="preserve" data-0="transform: translateY(0%);" data-700="transform: translateY(-50%);">
             <style type="text/css">
@@ -384,7 +383,7 @@
           <div class="top">
             <div class="inner">
               <h4 class="pj-tit">react site</h4>
-              <p class="pj-txt">React 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br>스케줄 플래너 중점으로 하여 리스트 추가, 수정, 삭제 동작을 작업하였고, 날씨 API를 사용하여 현재 날씨를 알 수 있도록 구현하였습니다. 또한 SCSS 사용하여 스타일을 지정하였습니다.</p>
+              <p class="pj-txt">React 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br>스케줄 플래너 중점으로 하여 리스트 추가, 수정, 삭제 동작을 작업하였고(CRUD), 날씨 API를 사용하여 현재 날씨를 알 수 있도록 구현하였습니다. 또한 SCSS 사용하여 스타일을 지정하였습니다.</p>
               <div class="btn-inner">
                 <a href="https://dakong8.github.io/react-project" target="_blank" class="view-btn">site view</a>
                 <a href="https://github1s.com/dakong8/react-project/tree/feat/create-page" target="_blank" class="view-btn">code view</a>
@@ -417,7 +416,7 @@
         </h3>
       </div>
       <div class="inner" data-24500="opacity: 0; display: block;" data-25000="opacity: 1;" data-28000="display: none;">
-        <canvas id="canvas1"></canvas>
+        <canvas id="canvas1" class="fix full"></canvas>
       </div>
       <div class="circle" data-24000="width: 0vw; height: 0vw; opacity: 0.2; display: block;" data-25000="width: 200vw; height: 200vw; opacity: 0;" data-25001="display: none;"></div>
     </section>
@@ -436,7 +435,7 @@
               <img src="images/script-img1.jpg" alt="레코드이미지">
             </div>
             
-            <div id="modal-inner">
+            <div class="modal-inner fix full">
               <div class="modal-bg">
                 <div class="modal">
                   <iframe src="https://dakong8.github.io/javascript/music_player" frameborder="0"></iframe>
@@ -457,7 +456,7 @@
               <img src="images/script-img2.png" alt="테트리스이미지">
             </div>
 
-            <div id="modal-inner">
+            <div class="modal-inner fix full">
               <div class="modal-bg">
                 <div class="modal">
                   <iframe src="https://dakong8.github.io/javascript/tetris_game" frameborder="0"></iframe>
@@ -478,7 +477,7 @@
               <img src="images/script-img3.jpg" alt="카드이미지">
             </div>
 
-            <div id="modal-inner">
+            <div class="modal-inner fix full">
               <div class="modal-bg">
                 <div class="modal">
                   <iframe src="https://dakong8.github.io/javascript/memory_game" frameborder="0"></iframe>
@@ -499,7 +498,7 @@
               <img src="images/script-img4.jpg" alt="키보드이미지">
             </div>
 
-            <div id="modal-inner">
+            <div class="modal-inner fix full">
               <div class="modal-bg">
                 <div class="modal">
                   <iframe src="https://dakong8.github.io/javascript/typing_game2" frameborder="0"></iframe>
@@ -515,7 +514,7 @@
     </section>
     <!-- // Script end -->
 
-    <section id="section9" data-0="display: none;" data-29199="display: block; visibility: hidden;" data-29200="visibility: visible;" data-32900="display: block;" data-32901="display: none;">
+    <section id="section9" class="fix full" data-0="display: none;" data-29199="display: block; visibility: hidden;" data-29200="visibility: visible;" data-32900="display: block;" data-32901="display: none;">
       <div class="tit-inner">
         <h3 class="tit gradient" data-0="display: block; visibility: hidden;" data-30300="visibility: visible; transform: translate(-150%, -50%); opacity: 0;" data-30700="transform: translate(-50%, -50%); opacity: 1;" data-32000="transform: translate(-50%, -50%); opacity: 1;" data-32400="transform: translate(50%, -50%); opacity: 0;">Animation</h3>
       </div>
@@ -526,7 +525,7 @@
     </section>
 
     <!-- Animation str -->
-    <section id="section10" data-32600="visibility: hidden; opacity: 0;" data-32601="visibility: visible;" data-32900="opacity: 1;" data-37400="left: 0%;" data-38800="left: -100%;">
+    <section id="section10" class="fix full"  data-32600="visibility: hidden; opacity: 0;" data-32601="visibility: visible;" data-32900="opacity: 1;" data-37400="left: 0%;" data-38800="left: -100%;">
       <div class="ani">
         <div class="contents">
           <div class="cont1" data-32600="transform: translateX(100%);" data-35000="transform: translateX(-100%);">
@@ -555,14 +554,14 @@
     <!-- // Animation end -->
 
     <!-- Profile str -->
-    <section id="section11" data-37399="visibility: hidden;" data-37400="visibility: visible;">
+    <section id="section11" class="fix full"  data-37399="visibility: hidden;" data-37400="visibility: visible;">
       <h3 class="blind">profile</h3>
       <div class="img-inner" data-37399="display: none;" data-37400="display: block;" data-41800="display: none;">
         <img src="images/profile-camera.png" alt="카메라" class="camera" data-38800="transform: translate(-50%, -50%) scale(0.2); opacity: 0;" data-39800="transform: translate(-50%, -50%) scale(1); opacity: 1;">
         <img src="images/profile-light.png" alt="조명" class="light" data-39800="transform: translate(0%, -50%) scale(0.1); opacity: 0;" data-40100="transform: translate(0%, -50%) scale(2); opacity: 1" data-40200="transform: translate(0%, -50%) scale(0); opacity: 0">
         <img src="images/profile-my-photo.jpg" alt="프로필사진" class="my-photo" data-40200="transform: translate(-50%, -50%) rotate(0deg); opacity: 0;" data-40400="opacity: 1;" data-40800="transform: translate(-50%, -50%) rotate(0deg); left: 50%;" data-41800="transform: translate(-50%, -50%) rotate(360deg); left: 200%;">
       </div>
-      <div class="profile" data-41800="opacity: 0;" data-42400="opacity: 1; transform: scale(0.3);" data-43400="transform: scale(1);">
+      <div class="profile full" data-41800="opacity: 0;" data-42400="opacity: 1; transform: scale(0.3);" data-43400="transform: scale(1);">
         <img src="images/profile-my-photo.jpg" alt="프로필사진" class="my-photo" data-42400="visibility: hidden;" data-43000="visibility: visible;" data-43100="opacity: 0;" data-43400="opacity: 1;">
         <div class="info">
           <h4 class="prof-tit">Info</h4>
@@ -599,14 +598,6 @@
   <script src="js/skrollr.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js" crossorigin="anonymous"></script>
-  <script type="importmap">
-    {
-      "imports": {      
-        "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.154.0/examples/jsm/"
-      }
-    }
-  </script>
   <!--  Custom JS  -->
   <script type="module" src="js/canvas_1.js"></script>
   <script type="module" src="js/canvas_2.js"></script>
