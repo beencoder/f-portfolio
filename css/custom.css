@@ -30,7 +30,7 @@ body.modal-active {
   border-radius: 50%;
   border: solid 2px #94C6F2;
 }
-/* .scroll {
+.scroll {
   position: fixed;
   left: 10px;
   top: 10px;
@@ -42,7 +42,7 @@ body.modal-active {
   text-align: center;
   font-size: 1.4rem;
   line-height: 48px;
-} */
+}
 
 /* Loading */
 .hidden {
@@ -272,7 +272,7 @@ section .pj-tit {
   font-style: italic;
 }
 section.tit-page {
-  height: 3500px;
+  height: 2500px;
   background-color: #000;
 }
 section .circle {
@@ -304,7 +304,7 @@ section .circle {
   top: 0;
   left: 0;
   display: grid;
-  grid-template-columns: 160fr 103fr;
+  grid-template-columns: 73fr 103fr;
   padding: 60px;
 }
 #section1 .tit-inner .inner {
@@ -339,7 +339,7 @@ section .circle {
 }
 #section2 .about .contents > div {
   position: relative;
-  width: 120vw;
+  width: 2000px;
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -377,17 +377,6 @@ section .circle {
   position: relative;
   z-index: 1;
 }
-#section2 .about .contents > div:not(.cont1) .highlight::before {
-  content: "";
-  position: absolute;
-  top: -70%;
-  left: -5%;
-  right: -3%;
-  bottom: -25%;
-  background: url("../images/point-brush.png") no-repeat 0 center/cover;
-  z-index: -1;
-}
-
 #section2 .about .contents .cont2, #section2 .about .contents .cont3 {
   justify-content: center;
 }
@@ -435,7 +424,7 @@ section .circle {
 #section2 .about .contents div .about-txt .info-txt {
   position: absolute;
   bottom: 6%;
-  right: -4%;
+  right: -1%;
   width: 55%;
   font-size: 1.8rem;
   line-height: 1.3;
@@ -504,12 +493,12 @@ section .circle {
 
 /* P-project Title */
 #section3 {
-  margin-top: 6500px;
+  margin-top: 4000px;
 }
 
 /* P-project + F-project */
 #section4 {
-  background-color: #000;
+  background-color: rgb(2, 2, 2);
   z-index: 5;
 }
 #section4 .contents, #section6 .contents {
@@ -669,7 +658,7 @@ section .circle {
 
 /* F-project */
 #section6 {
-  background-color: #000;
+  background-color: rgb(2, 2, 2);
   z-index: 10;
 }
 
