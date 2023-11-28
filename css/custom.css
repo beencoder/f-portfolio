@@ -63,7 +63,7 @@ body.modal-active {
 }
 .loading .loading-tit {
   font-family: 'Philosopher', sans-serif;
-  font-size: 3vw;
+  font-size: 5vw;
   color: #fff;
   text-align: center;
   mix-blend-mode: difference;
@@ -377,9 +377,6 @@ section .circle {
   position: relative;
   z-index: 1;
 }
-#section2 .about .contents .cont2, #section2 .about .contents .cont3 {
-  justify-content: center;
-}
 #section2 .about .contents div .f-print {
   position: absolute;
   left: -50px;
@@ -448,47 +445,6 @@ section .circle {
 #section2 .about .contents .cont2 .img-inner .my-photo:nth-of-type(3) {
   width: 350px;
   z-index: 2;
-}
-
-#section2 .about .contents .cont3 .about-txt {
-  margin-left: 80px;
-}
-#section2 .about .contents .cont3 .about-txt .info-txt {
-  bottom: 7.5%;
-  right: -2%;
-  width: 70%;
-}
-#section2 .about .contents .cont3 .img-inner {
-  position: relative;
-}
-#section2 .about .contents .cont3  .img-inner::before {
-  content: "";
-  position: absolute;
-  top: 8%;
-  right:20%;
-  background: url("../images/about-home1.png") no-repeat center center/cover;
-  width: 100px;
-  height: 104px;
-  opacity: 0.7;
-  animation: img-change 3.5s infinite;
-}
-@keyframes img-change {
-  0% {
-    background-image: url("../images/about-home1.png");
-  }
-  25% {
-    background-image: url("../images/about-home2.png");
-  }
-  50% {
-    background-image: url("../images/about-home3.png");
-  }
-  75% {
-    background-image: url("../images/about-home4.png");
-  }
-}
-#section2 .about .contents .cont3 .img-inner .about-img {
-  width: 400px;
-  margin-left: 50px;
 }
 
 /* P-project Title */
