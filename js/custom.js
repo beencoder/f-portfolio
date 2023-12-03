@@ -65,7 +65,6 @@ let s = skrollr.init({
   smoothScrollingDuration: 200
 });
 
-// 선택자
 const menuBtn = document.querySelector(".menu-btn");
 const menuLists = document.querySelectorAll(".menu li a");
 const changeImgBtns = document.querySelectorAll(".change-btn");
